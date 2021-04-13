@@ -397,19 +397,19 @@
      </property>
      <property name="dateTime">
       <datetime>
-       <hour>17</hour>
+       <hour>0</hour>
        <minute>0</minute>
        <second>0</second>
        <year>1899</year>
        <month>12</month>
-       <day>31</day>
+       <day>30</day>
       </datetime>
      </property>
      <property name="currentSection">
-      <enum>QDateTimeEdit::DaySection</enum>
+      <enum>QDateTimeEdit::MonthSection</enum>
      </property>
      <property name="displayFormat">
-      <string>MM/dd/yyyy</string>
+      <string>MMM d yyyy</string>
      </property>
      <property name="timeSpec">
       <enum>Qt::UTC</enum>
@@ -430,6 +430,9 @@
        <pointsize>9</pointsize>
       </font>
      </property>
+     <property name="displayFormat">
+      <string>MMM d yyyy</string>
+     </property>
     </widget>
     <widget class="QDateEdit" name="dateEdit_3">
      <property name="geometry">
@@ -445,6 +448,9 @@
        <family>Segoe UI</family>
        <pointsize>9</pointsize>
       </font>
+     </property>
+     <property name="displayFormat">
+      <string>MMM d yyyy</string>
      </property>
     </widget>
    </widget>

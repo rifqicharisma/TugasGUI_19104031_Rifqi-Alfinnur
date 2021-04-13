@@ -179,6 +179,9 @@
     <property name="text">
      <string>Tri-State</string>
     </property>
+    <property name="tristate">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
