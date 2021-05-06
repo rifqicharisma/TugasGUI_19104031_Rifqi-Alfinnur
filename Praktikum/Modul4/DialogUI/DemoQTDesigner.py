@@ -1,5 +1,5 @@
 import sys
-from masukkan import *
+from DialogUi import *
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 
