@@ -19,4 +19,4 @@
 | 6 | Demo QFile Dialog 2 | ![QFiledialog2](https://user-images.githubusercontent.com/58881125/124144912-942fdd80-dab6-11eb-8fe1-a46cfcd31fb9.PNG) |
 | 7 | Demo QFont Dialog | ![QFontDialog](https://user-images.githubusercontent.com/58881125/124148844-41582500-daba-11eb-810a-9e0d82d23e0a.PNG) |
 | 8 | Demo QColor Dialog | ![QFontDialog](https://user-images.githubusercontent.com/58881125/124148844-41582500-daba-11eb-810a-9e0d82d23e0a.PNG) |
-| 9 | Demo QMain Windows | ![QMainWindows](https://user-images.githubusercontent.com/58881125/124148849-42895200-daba-11eb-83fc9073e8093a50.PNG) |
+| 9 | Demo QMain Windows | ![QMainWindows](https://user-images.githubusercontent.com/58881125/124149147-82e8d000-daba-11eb-8a2e-a441ac3b70cf.PNG) |
