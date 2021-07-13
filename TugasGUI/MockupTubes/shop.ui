@@ -86,7 +86,7 @@
      <rect>
       <x>430</x>
       <y>90</y>
-      <width>78</width>
+      <width>91</width>
       <height>21</height>
      </rect>
     </property>
@@ -94,6 +94,8 @@
      <font>
       <family>MS Serif</family>
       <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
     <property name="text">
@@ -432,7 +434,7 @@
              <string>2 Times Help</string>
             </property>
            </widget>
-           <widget class="QWidget" name="">
+           <widget class="QWidget" name="layoutWidget">
             <property name="geometry">
              <rect>
               <x>180</x>
