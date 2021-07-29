@@ -234,6 +234,50 @@ class Ui_MainWindow(object):
         else:
             Ui_MainWindow.messagebox(Ui_MainWindow, "GAGAL", "Mohon lengkapi form ")
 
+    def hapus(self):
+        nim = self.datamhs.txtNim_2.text()
+        if self.datamhs.txtNim_2.text():
+            con = pymysql.connect(db='tubes_gui', user='root', passwd='', host='localhost', port=3306, autocommit=True)
+            cur = con.cursor()
+            sql = "DELETE from mhs where nim='" + str(nim) + "'"
+            data = cur.execute(sql)
+            Ui_MainWindow.messagebox(Ui_MainWindow,"SUKSES", "Data Berhasil di Hapus")
+        else:
+            Ui_MainWindow.messagebox(Ui_MainWindow,"GAGAL", "Mohon isi nim dengan sesuai ")
+
+    def edit(self):
+        nim = self.datamhs.txtNim_2.text()
+        nama = self.datamhs.txtNama_2.text()
+        jurusan = self.datamhs.txtJurusan_2.text()
+        no = self.datamhs.txtNo_2.text()
+        insert = (nim, nama, jurusan, no)
+        if self.datamhs.txtNim_2.text() and self.datamhs.txtNama_2.text() and self.datamhs.txtJurusan_2.text() and self.datamhs.txtNo_2.text():
+            con = pymysql.connect(db='tubes_gui', user='root', passwd='', host='localhost', port=3306, autocommit=True)
+            cur = con.cursor()
+            sql = "UPDATE mhs set nama='" + str(nama) + "', jurusan='" + str(jurusan) + "', no='" + str(no) + "' where nim='" + str(nim) + "'"
+            data = cur.execute(sql)
+            Ui_MainWindow.messagebox(Ui_MainWindow,"SUKSES", "Data Berhasil di Submit")
+        else:
+            Ui_MainWindow.messagebox(Ui_MainWindow,"GAGAL", "Mohon lengkapi form ")
+    
+    def baca(self):
+        con = pymysql.connect(db='db_mhs',
+        user='root', passwd='', host='localhost', port=3306, autocommit=True)
+        cur = con.cursor()
+        result = cur.execute("SELECT * FROM mhs")
+        self.datamhs.tableWidget.setRowCount(0)
+        for row_number, row_data in enumerate(cur):
+            self.datamhs.tableWidget.insertRow(row_number)
+        for column_number, data in enumerate(row_data):
+            self.datamhs.tableWidget.setItem(row_number, column_number, QtWidgets.QTableWidgetItem(str(data)))
+    
+    def clear(self):
+        self.datamhs.txtNim_2.clear()
+        self.datamhs.txtNim_2.setEnabled(True)
+        self.datamhs.txtNama_2.clear()
+        self.datamhs.txtJurusan_2.clear()
+        self.datamhs.txtNo_2.clear()
+
 class datamhs(QWidget):
     def __init__(self):
         super().__init__()
